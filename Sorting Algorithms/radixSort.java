@@ -7,15 +7,15 @@ public class Main
         int[] count=new int[max+1];
         
         for(int i=0;i<n;i++){
-            count[arr[i]]++;
+            count[(arr[i]/place)%10]++;
         }
         for(int i=1;i<=max;i++){
             count[i]=count[i]+count[i-1];
         }
         
-        for(int i=0;i<n;i++){
-            ret[count[arr[i]]-1]=arr[i];
-            count[arr[i]]--;
+        for(int i=n-1;i>=0;i--){
+            ret[count[(arr[i]/place)%10]-1]=arr[i];
+            count[(arr[i]/place)%10]--;
         }
         
         for(int i=0;i<n;i++){
