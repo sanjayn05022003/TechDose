@@ -26,5 +26,3 @@ class Solution {
         return sum;
     }
 }
-Footer
-© 2022 GitHub, In
